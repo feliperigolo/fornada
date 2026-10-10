@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NF-e FICTICIA para testes locais. CNPJs, chave e dados nao sao reais. -->
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe35261011222333000181550010000123451987654321" versao="4.00">
+      <ide>
+        <cUF>35</cUF>
+        <cNF>98765432</cNF>
+        <natOp>VENDA DE MERCADORIA</natOp>
+        <mod>55</mod>
+        <serie>1</serie>
+        <nNF>12345</nNF>
+        <dhEmi>2026-10-08T09:30:00-03:00</dhEmi>
+        <tpNF>1</tpNF>
+        <idDest>1</idDest>
+        <tpAmb>2</tpAmb>
+        <finNFe>1</finNFe>
+      </ide>
+      <emit>
+        <CNPJ>11222333000181</CNPJ>
+        <xNome>DISTRIBUIDORA PAO DOURADO INSUMOS PARA PANIFICACAO LTDA</xNome>
+        <xFant>Pao Dourado Insumos</xFant>
+        <enderEmit>
+          <xLgr>RUA DOS PADEIROS</xLgr>
+          <nro>450</nro>
+          <xBairro>DISTRITO INDUSTRIAL</xBairro>
+          <cMun>3550308</cMun>
+          <xMun>SAO PAULO</xMun>
+          <UF>SP</UF>
+          <CEP>01234567</CEP>
+        </enderEmit>
+        <IE>123456789110</IE>
+        <CRT>3</CRT>
+      </emit>
+      <dest>
+        <CNPJ>99888777000155</CNPJ>
+        <xNome>PANIFICADORA KELI</xNome>
+        <indIEDest>9</indIEDest>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>FAR25</cProd>
+          <cEAN>7891000100103</cEAN>
+          <xProd>FARINHA DE TRIGO TIPO 1 SC 25KG</xProd>
+          <NCM>11010010</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>SC</uCom>
+          <qCom>10.0000</qCom>
+          <vUnCom>98.5000000000</vUnCom>
+          <vProd>985.00</vProd>
+          <cEANTrib>7891000100103</cEANTrib>
+          <uTrib>SC</uTrib>
+          <qTrib>10.0000</qTrib>
+          <vUnTrib>98.5000000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS>
+        </imposto>
+      </det>
+      <det nItem="2">
+        <prod>
+          <cProd>FERM500</cProd>
+          <cEAN>7898000200205</cEAN>
+          <xProd>FERMENTO BIOLOGICO FRESCO 500G</xProd>
+          <NCM>21021000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>PCT</uCom>
+          <qCom>20.0000</qCom>
+          <vUnCom>11.9000000000</vUnCom>
+          <vProd>238.00</vProd>
+          <cEANTrib>7898000200205</cEANTrib>
+          <uTrib>PCT</uTrib>
+          <qTrib>20.0000</qTrib>
+          <vUnTrib>11.9000000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS>
+        </imposto>
+      </det>
+      <det nItem="3">
+        <prod>
+          <cProd>ACU5</cProd>
+          <cEAN>7896000300307</cEAN>
+          <xProd>ACUCAR CRISTAL PCT 5KG</xProd>
+          <NCM>17019900</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>PCT</uCom>
+          <qCom>8.0000</qCom>
+          <vUnCom>21.4000000000</vUnCom>
+          <vProd>171.20</vProd>
+          <cEANTrib>7896000300307</cEANTrib>
+          <uTrib>PCT</uTrib>
+          <qTrib>8.0000</qTrib>
+          <vUnTrib>21.4000000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS>
+        </imposto>
+      </det>
+      <det nItem="4">
+        <prod>
+          <cProd>SAL1</cProd>
+          <cEAN>7897000400409</cEAN>
+          <xProd>SAL REFINADO PCT 1KG</xProd>
+          <NCM>25010019</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>PCT</uCom>
+          <qCom>12.0000</qCom>
+          <vUnCom>2.8500000000</vUnCom>
+          <vProd>34.20</vProd>
+          <cEANTrib>7897000400409</cEANTrib>
+          <uTrib>PCT</uTrib>
+          <qTrib>12.0000</qTrib>
+          <vUnTrib>2.8500000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS>
+        </imposto>
+      </det>
+      <det nItem="5">
+        <prod>
+          <cProd>GORD15</cProd>
+          <cEAN>7895000500501</cEAN>
+          <xProd>GORDURA VEGETAL HIDROGENADA CX 15KG</xProd>
+          <NCM>15162000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>CX</uCom>
+          <qCom>2.0000</qCom>
+          <vUnCom>142.0000000000</vUnCom>
+          <vProd>284.00</vProd>
+          <cEANTrib>7895000500501</cEANTrib>
+          <uTrib>CX</uTrib>
+          <qTrib>2.0000</qTrib>
+          <vUnTrib>142.0000000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS>
+        </imposto>
+      </det>
+      <det nItem="6">
+        <prod>
+          <cProd>MELH1</cProd>
+          <cEAN>7894000600603</cEAN>
+          <xProd>MELHORADOR DE FARINHA PANIFICACAO 1KG</xProd>
+          <NCM>21069090</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>PCT</uCom>
+          <qCom>5.0000</qCom>
+          <vUnCom>28.5000000000</vUnCom>
+          <vProd>142.50</vProd>
+          <cEANTrib>7894000600603</cEANTrib>
+          <uTrib>PCT</uTrib>
+          <qTrib>5.0000</qTrib>
+          <vUnTrib>28.5000000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS>
+        </imposto>
+      </det>
+      <total>
+        <ICMSTot>
+          <vProd>1854.90</vProd>
+          <vNF>1854.90</vNF>
+        </ICMSTot>
+      </total>
+    </infNFe>
+  </NFe>
+</nfeProc>

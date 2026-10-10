@@ -27,6 +27,17 @@ async function main() {
   })
 
   console.log('✅ Usuário admin criado:', user.email)
+
+  const bakeryName = 'Panificadora Keli'
+  const bakery =
+    (await prisma.bakery.findFirst({
+      where: { ownerId: user.id, name: bakeryName },
+    })) ??
+    (await prisma.bakery.create({
+      data: { name: bakeryName, ownerId: user.id },
+    }))
+
+  console.log('✅ Padaria criada:', bakery.name)
   await prisma.$disconnect()
 }
 
