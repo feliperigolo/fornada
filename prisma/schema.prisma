@@ -85,6 +85,7 @@ model Bakery {
   categories      Category[]
   products        Product[]
   ingredients     Ingredient[]
+  recipes         Recipe[]
   costs           Cost[]
   nfeImports      NfeImport[]
   monthlyRevenues MonthlyRevenue[]
@@ -126,10 +127,14 @@ model Ingredient {
   createdAt     DateTime      @default(now())
 }
 
+// A recipe may stand alone (e.g. a base dough used by other recipes); productId is optional.
 model Recipe {
   id        String       @id @default(uuid())
-  productId String
-  product   Product      @relation(fields: [productId], references: [id])
+  name      String
+  bakeryId  String
+  bakery    Bakery       @relation(fields: [bakeryId], references: [id])
+  productId String?
+  product   Product?     @relation(fields: [productId], references: [id])
   yieldQty  Decimal?     @db.Decimal(14, 3)
   yieldUnit String?
   notes     String?
