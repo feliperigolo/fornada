@@ -33,25 +33,25 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-cream flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
 
         {/* Logo */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-amber-400 tracking-tight">
+          <h1 className="text-4xl font-semibold text-primary tracking-tight">
             Fornada
           </h1>
-          <p className="text-zinc-500 text-sm mt-2">
+          <p className="text-charcoal text-sm mt-2">
             Gestão financeira para padarias
           </p>
         </div>
 
         {/* Card */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+        <div className="bg-white rounded-2xl p-8 shadow-lg shadow-primary/10">
           <form onSubmit={handleSubmit} className="space-y-5">
 
             <div>
-              <label className="block text-sm text-zinc-400 mb-1.5">
+              <label className="block text-sm text-charcoal mb-1.5">
                 E-mail
               </label>
               <input
@@ -60,12 +60,12 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="seu@email.com"
-                className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-amber-400 transition-colors"
+                className="w-full bg-white border border-charcoal/30 rounded-lg px-4 py-2.5 text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-primary transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-sm text-zinc-400 mb-1.5">
+              <label className="block text-sm text-charcoal mb-1.5">
                 Senha
               </label>
               <div className="relative">
@@ -75,12 +75,12 @@ export default function LoginPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   placeholder="••••••••"
-                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 pr-12 text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-amber-400 transition-colors"
+                  className="w-full bg-white border border-charcoal/30 rounded-lg px-4 py-2.5 pr-12 text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-primary transition-colors"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/60 hover:text-charcoal transition-colors"
                 >
                   {showPassword ? (
                     // Olho fechado
@@ -99,13 +99,13 @@ export default function LoginPage() {
             </div>
 
             {error && (
-              <p className="text-red-400 text-sm text-center">{error}</p>
+              <p className="text-red-600 text-sm text-center">{error}</p>
             )}
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-lg py-2.5 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg py-2.5 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Entrando...' : 'Entrar'}
             </button>
