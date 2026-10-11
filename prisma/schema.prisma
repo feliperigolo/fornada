@@ -165,6 +165,10 @@ model Cost {
   type       CostType   @default(FIXED)
   recurrence Recurrence @default(MONTHLY)
   startDate  DateTime?
+  /// Primeiro dia (UTC) do mês de competência do lançamento.
+  month      DateTime
+
+  @@index([bakeryId, month])
 }
 
 model MonthlyRevenue {

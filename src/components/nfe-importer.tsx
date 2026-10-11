@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react'
 import { CheckCircle2, FileUp, Loader2, Search, X } from 'lucide-react'
+import { formatBRL } from '@/lib/format'
 import type {
   ImportSummary,
   IngredientOption,
@@ -19,7 +20,6 @@ type CardState = {
 
 type Phase = 'idle' | 'parsing' | 'review' | 'importing' | 'done'
 
-const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
 const num = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 3 })
 
 function normalize(s: string) {
@@ -308,8 +308,8 @@ function ItemCard({
     >
       <p className="font-medium text-primary">{item.name}</p>
       <p className="mb-3 text-sm">
-        {num.format(item.quantity)} {item.unit ?? ''} × {brl.format(item.unitPrice)} ={' '}
-        <strong>{brl.format(item.totalPrice)}</strong>
+        {num.format(item.quantity)} {item.unit ?? ''} × {formatBRL(item.unitPrice)} ={' '}
+        <strong>{formatBRL(item.totalPrice)}</strong>
       </p>
 
       <div className="mb-3 grid grid-cols-3 gap-1 rounded-lg bg-cream p-1">
@@ -334,7 +334,7 @@ function ItemCard({
             <div className="flex items-center justify-between gap-2 rounded-lg border border-accent bg-accent/10 px-3 py-2 text-sm">
               <span>
                 <strong>{selected.name}</strong> · {selected.unit} ·{' '}
-                {brl.format(selected.costPerUnit)} atual
+                {formatBRL(selected.costPerUnit)} atual
               </span>
               <button
                 type="button"
@@ -381,7 +381,7 @@ function ItemCard({
           {unitMismatch && (
             <p className="mt-2 text-xs text-orange">
               Unidade da nota ({item.unit}) difere do insumo ({selected?.unit}). O custo será
-              gravado como {brl.format(item.unitPrice)} por {selected?.unit}.
+              gravado como {formatBRL(item.unitPrice)} por {selected?.unit}.
             </p>
           )}
         </div>
@@ -390,7 +390,7 @@ function ItemCard({
       {card.action === 'create' && (
         <p className="text-sm">
           Será criado o insumo “{item.name}” ({item.unit || 'un'}) com custo{' '}
-          {brl.format(item.unitPrice)}.
+          {formatBRL(item.unitPrice)}.
         </p>
       )}
     </li>
